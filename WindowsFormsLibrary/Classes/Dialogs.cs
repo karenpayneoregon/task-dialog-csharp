@@ -224,7 +224,7 @@ namespace WindowsFormsLibrary.Classes
 
             TaskDialogButton yesButton = new("Yes") { Tag = DialogResult.Yes };
             TaskDialogButton noButton = new("No") { Tag = DialogResult.No };
-
+            
             TaskDialogButtonCollection buttons = new TaskDialogButtonCollection();
 
             if (defaultButton == DialogResult.Yes)
@@ -373,11 +373,7 @@ namespace WindowsFormsLibrary.Classes
                 Icon = new TaskDialogIcon(icon),
                 Buttons = buttons
             };
-
             
-
-
-
             var result = TaskDialog.ShowDialog(owner, page, TaskDialogStartupLocation.CenterOwner);
 
             return (DialogResult)result.Tag == DialogResult.Yes;
@@ -709,8 +705,14 @@ namespace WindowsFormsLibrary.Classes
                 Caption = options.Caption,
                 Icon = new TaskDialogIcon(options.Icon),
                 AllowCancel = true,
-                Verification = new TaskDialogVerificationCheckBox() { Text = options.VerificationText },
-                Buttons = new TaskDialogButtonCollection() { TaskDialogButton.Yes, TaskDialogButton.No },
+                Verification = new TaskDialogVerificationCheckBox()
+                {
+                    Text = options.VerificationText
+                },
+                Buttons = new TaskDialogButtonCollection()
+                {
+                    TaskDialogButton.Yes, TaskDialogButton.No
+                },
                 DefaultButton = TaskDialogButton.No
             };
 

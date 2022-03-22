@@ -143,10 +143,7 @@ namespace WpfExamples
             var settings = SettingOperations.GetSetting;
             settings.ShowAgain = ShowAgainCheckBox.IsChecked.Value;
             SettingOperations.SaveChanges(settings);
-
-            
+           
         }
-
-
     }
 }
