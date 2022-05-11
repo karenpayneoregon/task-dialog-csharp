@@ -795,6 +795,40 @@ namespace WindowsFormsLibrary.Classes
             TaskDialog.ShowDialog(owner,page);
 
         }
+
+        /// <summary>
+        /// Dialogs.WithStrings(this, System.Globalization.DateTimeFormatInfo.CurrentInfo!.MonthNames[..^1].ToList());
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="items"></param>
+        public static void WithStrings(Control owner, List<string> items)
+        {
+            
+            var buttons = new TaskDialogButtonCollection();
+            foreach (var item in items)
+            {
+                buttons.Add(new TaskDialogCommandLinkButton(item));
+            }
+
+            foreach (var button in buttons)
+            {
+                button.Enabled = false;
+            }
+
+            buttons.Add(new TaskDialogCommandLinkButton("&OK", "Close"));
+ 
+            TaskDialogPage page = new()
+            {
+                Caption = "Items",
+                Heading = "List",
+                AllowCancel = true,
+                Icon = TaskDialogIcon.Information,
+                Buttons = buttons
+            };
+
+            TaskDialog.ShowDialog(owner, page);
+
+        }
         /// <summary>
         /// Example for opening a web page for WPF
         /// </summary>
