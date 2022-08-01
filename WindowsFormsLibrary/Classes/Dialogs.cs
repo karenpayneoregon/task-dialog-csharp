@@ -74,7 +74,7 @@ namespace WindowsFormsLibrary.Classes
 
 
             TaskDialogButton result = TaskDialog.ShowDialog(page);
-
+            
             return (DialogResult)result.Tag == DialogResult.Yes;
 
         }
@@ -449,7 +449,22 @@ namespace WindowsFormsLibrary.Classes
             TaskDialog.ShowDialog(owner, page);
 
         }
+        public static void InformationModeless( string heading, string buttonText = "Ok")
+        {
 
+            TaskDialogButton okayButton = new(buttonText);
+
+            TaskDialogPage page = new()
+            {
+                Caption = "Information",
+                SizeToContent = true,
+                Heading = heading,
+                Buttons = new TaskDialogButtonCollection() { okayButton }
+            };
+
+            TaskDialog.ShowDialog(IntPtr.Zero, page);
+
+        }
         /// <summary>
         /// Mocked example for showing a auto-close dialog which by not passing parent like the
         /// overloaded version below centers the dialog on the monitor
