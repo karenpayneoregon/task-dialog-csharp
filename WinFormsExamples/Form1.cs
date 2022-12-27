@@ -59,7 +59,8 @@ namespace WinFormsExamples
 
         private void AutoCloseButton_Click(object sender, EventArgs e)
         {
-            Dialogs.AutoCloseDialog(this,Properties.Resources.Timer_16x,SecondsUpDown.AsInteger);
+            //Dialogs.AutoCloseDialog(this,Properties.Resources.Timer_16x,SecondsUpDown.AsInteger);
+            Dialogs.AutoCloseDialog(this,Properties.Resources.Timer_16x,2);
         }
 
         private void AutoCloseProgressButton_Click(object sender, EventArgs e) => 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class projects", "{B9DB63E8-F947-4DFE-A05A-28D2A6F22042}"
 EndProject
@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoCloseNotTaskDialog", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourcesDemo", "ResourcesDemo\ResourcesDemo.csproj", "{F1D7654A-2E02-4E77-BC65-DBBF87FA3224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopHelperLibrary", "DesktopHelperLibrary\DesktopHelperLibrary.csproj", "{214D0D0B-BE0D-4A63-897A-CFB9A740EE7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesktopHelperLibrary", "DesktopHelperLibrary\DesktopHelperLibrary.csproj", "{214D0D0B-BE0D-4A63-897A-CFB9A740EE7C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskDialogAutoCloseApp", "TaskDialogAutoCloseApp\TaskDialogAutoCloseApp.csproj", "{59191458-6FB6-4A3A-A347-AD6D56657956}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{214D0D0B-BE0D-4A63-897A-CFB9A740EE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{214D0D0B-BE0D-4A63-897A-CFB9A740EE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{214D0D0B-BE0D-4A63-897A-CFB9A740EE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59191458-6FB6-4A3A-A347-AD6D56657956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59191458-6FB6-4A3A-A347-AD6D56657956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59191458-6FB6-4A3A-A347-AD6D56657956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59191458-6FB6-4A3A-A347-AD6D56657956}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{318573A2-6E28-4E9B-B224-7E76846DA5B1} = {0E0D8F5E-56EE-4AC5-87F0-36AD63DB6A84}
 		{F1D7654A-2E02-4E77-BC65-DBBF87FA3224} = {0E0D8F5E-56EE-4AC5-87F0-36AD63DB6A84}
 		{214D0D0B-BE0D-4A63-897A-CFB9A740EE7C} = {B9DB63E8-F947-4DFE-A05A-28D2A6F22042}
+		{59191458-6FB6-4A3A-A347-AD6D56657956} = {0E0D8F5E-56EE-4AC5-87F0-36AD63DB6A84}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72CE84AA-1FD5-4622-8AC0-7D89F500CF74}

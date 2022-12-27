@@ -224,7 +224,7 @@ namespace WindowsFormsLibrary.Classes
 
             TaskDialogButton yesButton = new("Yes") { Tag = DialogResult.Yes };
             TaskDialogButton noButton = new("No") { Tag = DialogResult.No };
-            
+            TaskDialogVerificationCheckBox checkBox = new TaskDialogVerificationCheckBox("Verify");
             TaskDialogButtonCollection buttons = new TaskDialogButtonCollection();
 
             if (defaultButton == DialogResult.Yes)
@@ -245,7 +245,7 @@ namespace WindowsFormsLibrary.Classes
                 Heading = heading,
                 Icon = new TaskDialogIcon(Properties.Resources.QuestionBlue),
                 Buttons = buttons, 
-                AllowCancel = true
+                AllowCancel = true, Verification = checkBox
             };
 
             var result = TaskDialog.ShowDialog(owner, page);
@@ -588,6 +588,47 @@ namespace WindowsFormsLibrary.Classes
                 Text = "Some text",
                 Icon = new TaskDialogIcon(Icon),
                 Buttons = new TaskDialogButtonCollection() { continueButton, cancelButton },
+                Caption = "Auto-close"
+            };
+
+            using Timer timer = new()
+            {
+                Enabled = true,
+                Interval = 100
+            };
+
+            timer.Tick += (_, _) =>
+            {
+                remaining -= 1;
+
+                if (remaining != 0) return;
+                timer.Enabled = false;
+                if (continueButton.BoundPage is not null)
+                {
+                    continueButton.PerformClick();
+                }
+            };
+
+            TaskDialogButton result = TaskDialog.ShowDialog(owner, page);
+
+            ContinueOperation?.Invoke(result == continueButton);
+
+        }
+
+        public static void AutoCloseDialog1(Control owner, Icon Icon, int seconds, string okText = "OK")
+        {
+
+            var remaining = seconds * 10;
+
+            TaskDialogButton continueButton = new(okText);
+
+
+            TaskDialogPage page = new()
+            {
+                Heading = "Continuing with next process...",
+                Text = "Some text",
+                //Icon = new TaskDialogIcon(Icon),
+                Buttons = new TaskDialogButtonCollection() { continueButton},
                 Caption = "Auto-close"
             };
 
