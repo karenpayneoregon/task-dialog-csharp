@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -190,6 +191,35 @@ namespace WinFormsExamples
             }
         }
 
+        private void ConventionalQuestionButton_Click(object sender, EventArgs e)
+        {
+            var dir = new DirectoryInfo("C:\\Alstom\\NMS-IPv2\\NCM\\DevicesConfiguration");
+            if (WindowsDialogs.Question("Remove files?"))
+            {
 
+                try
+                {
+                    foreach (var file in dir.EnumerateFiles("test*.*\""))
+                    {
+                        file.Delete();
+                    }
+                }
+                catch (Exception exception)
+                {
+                    // log exception
+                }
+            }
+        }
     }
+}
+
+public static class WindowsDialogs
+{
+    public static bool Question(string text) =>
+        (MessageBox.Show(
+            text,
+            Application.ProductName,
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button2) == DialogResult.Yes);
 }
