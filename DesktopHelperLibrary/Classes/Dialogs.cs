@@ -45,7 +45,7 @@ namespace DesktopHelperLibrary.Classes
 
             TaskDialogButton result = TaskDialog.ShowDialog(page);
 
-            return (DialogResult)result.Tag == DialogResult.Yes;
+            return (DialogResult)result.Tag! == DialogResult.Yes;
 
         }
 
@@ -93,7 +93,7 @@ namespace DesktopHelperLibrary.Classes
 
             var result = TaskDialog.ShowDialog(owner, page);
 
-            return (DialogResult)result.Tag == DialogResult.Yes;
+            return (DialogResult)result.Tag! == DialogResult.Yes;
 
         }
 

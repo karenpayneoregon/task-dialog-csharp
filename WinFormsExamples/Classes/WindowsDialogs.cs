@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+﻿namespace WinFormsExamples.Classes;
 
 public static class WindowsDialogs
 {

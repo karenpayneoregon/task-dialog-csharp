@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Windows.Forms;
-using WinFormsExamples.Classes;
+﻿using System.Diagnostics;
 
-namespace WinFormsExamples.Extensions
+namespace WinFormsExamples.Extensions;
+
+/// <summary>
+/// Common string extensions 
+/// </summary>
+public static class Extensions
 {
-    /// <summary>
-    /// Common string extensions 
-    /// </summary>
-    public static class Extensions
-    {
-        [DebuggerStepThrough]
-        public static string ToYesNoString(this bool value) => (value ? "Yes" : "No");
-    }
+    [DebuggerStepThrough]
+    public static string ToYesNoString(this bool value) => (value ? "Yes" : "No");
 }

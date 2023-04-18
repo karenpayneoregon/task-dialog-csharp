@@ -2,7 +2,11 @@
 
 When an application requires a message to be display or to ask a user questions the common method is to use a [MessageBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-6.0).
 
-A standard message box with its many overloads for Show method is fine for simply displaying and asking for input (without a input/textbox) while the TaskDialog provides more flexibilities. With these flexibilities comes more code which can be placed into a separate class in a project or better, place code into a separate class project. To use the class project, add a reference to a project or create a NuGet local package and install the package in any project.
+
+> **Note**
+> With .NET Core 5 and higher there is TaskDialog. All code provided started out as .NET Core 5 and has been updated to use .NET Core 7. 
+
+A standard `message box` with its many `overloads` for `Show` method is fine for simply displaying and asking for input (without a input/textbox) while the TaskDialog provides more flexibilities. With these flexibilities comes more code which can be placed into a separate class in a project or better, place code into a separate class project. To use the class project, add a reference to a project or create a NuGet local package and install the package in any project.
 
 Below find common examples for using a TaskDialog in a Windows Form and WPF projects. And note that there are many more methods to explore in the class project WindowsFormsLibrary.
 
@@ -22,7 +26,7 @@ Below find common examples for using a TaskDialog in a Windows Form and WPF proj
 
 There are two frontend projects, one Windows Forms and one WPF. The Windows Forms project has more code samples but the WPF project is capable of the same code as found in the Windows Forms project. Why? Generally speaking there are more developers using Windows Forms than WPF.
 
-A third project, AutoCloseNotTaskDialog is a clean way to have a auto closing MessageBox prior to .NET Core 5.
+A third project, AutoCloseNotTaskDialog is a clean way to have a auto closing MessageBox prior to .NET Core 5. This project has not been updated to .NET Core 7.
 
 ## How to use
 
@@ -154,11 +158,11 @@ With MessageBox, a question is done as shown below
 ```csharp
 if (MessageBox.Show("Would you like a cup of Coffee?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 {
-
+    ...
 }
 else
 {
-
+    ...
 }
 ```
 
@@ -177,11 +181,11 @@ Usage
 ```csharp
 if (Dialogs.Question("Would you like a cup of Coffee?"))
 {
-
+    ...
 }
 else
 {
-
+    ...
 }
 ```
 
@@ -525,8 +529,6 @@ TaskDialogPage page = new()
     Icon = new TaskDialogIcon(icon),
     Buttons = buttons
 };
-
-
 
 
 
