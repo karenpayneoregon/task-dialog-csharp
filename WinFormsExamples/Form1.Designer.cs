@@ -55,6 +55,7 @@ namespace WinFormsExamples
             // 
             // AutoCloseButton
             // 
+            this.AutoCloseButton.AccessibleDescription = "Auto close dialog sample with user define timeout";
             this.AutoCloseButton.Image = global::WinFormsExamples.Properties.Resources.SplashScreen_16x;
             this.AutoCloseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AutoCloseButton.Location = new System.Drawing.Point(27, 16);
@@ -68,6 +69,7 @@ namespace WinFormsExamples
             // 
             // OpenTextFileButton
             // 
+            this.OpenTextFileButton.AccessibleDescription = "Use PowerShell to get computer information to a json file";
             this.OpenTextFileButton.Image = ((System.Drawing.Image)(resources.GetObject("OpenTextFileButton.Image")));
             this.OpenTextFileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.OpenTextFileButton.Location = new System.Drawing.Point(27, 132);
@@ -81,6 +83,7 @@ namespace WinFormsExamples
             // 
             // ResultsListBox
             // 
+            this.ResultsListBox.AccessibleDescription = "results from donot show again";
             this.ResultsListBox.FormattingEnabled = true;
             this.ResultsListBox.ItemHeight = 20;
             this.ResultsListBox.Location = new System.Drawing.Point(433, 36);
@@ -91,6 +94,7 @@ namespace WinFormsExamples
             // 
             // DoNotShowAgainButton
             // 
+            this.DoNotShowAgainButton.AccessibleDescription = "Display donot show again dialog";
             this.DoNotShowAgainButton.Image = global::WinFormsExamples.Properties.Resources.ShowDetails_16x;
             this.DoNotShowAgainButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DoNotShowAgainButton.Location = new System.Drawing.Point(27, 93);
@@ -104,6 +108,7 @@ namespace WinFormsExamples
             // 
             // ShowAgainCheckBox
             // 
+            this.ShowAgainCheckBox.AccessibleDescription = "Used to toggle show again";
             this.ShowAgainCheckBox.AutoSize = true;
             this.ShowAgainCheckBox.Location = new System.Drawing.Point(248, 99);
             this.ShowAgainCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -116,6 +121,7 @@ namespace WinFormsExamples
             // 
             // AutoCloseProgressButton
             // 
+            this.AutoCloseProgressButton.AccessibleDescription = "Auto close dialog demo fix fimeout";
             this.AutoCloseProgressButton.Image = global::WinFormsExamples.Properties.Resources.SplashScreen_16x;
             this.AutoCloseProgressButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AutoCloseProgressButton.Location = new System.Drawing.Point(27, 55);
@@ -129,6 +135,7 @@ namespace WinFormsExamples
             // 
             // SecondsUpDown
             // 
+            this.SecondsUpDown.AccessibleDescription = "Timeout input in seconds";
             this.SecondsUpDown.Location = new System.Drawing.Point(248, 19);
             this.SecondsUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SecondsUpDown.Name = "SecondsUpDown";
@@ -144,6 +151,7 @@ namespace WinFormsExamples
             // 
             // IconListBox
             // 
+            this.IconListBox.AccessibleDescription = "List of icons for donot show again dialog";
             this.IconListBox.FormattingEnabled = true;
             this.IconListBox.ItemHeight = 20;
             this.IconListBox.Location = new System.Drawing.Point(433, 280);
@@ -181,6 +189,7 @@ namespace WinFormsExamples
             // 
             // AskQuestionButton
             // 
+            this.AskQuestionButton.AccessibleDescription = "Question dialog example";
             this.AskQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("AskQuestionButton.Image")));
             this.AskQuestionButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AskQuestionButton.Location = new System.Drawing.Point(27, 171);
@@ -194,6 +203,7 @@ namespace WinFormsExamples
             // 
             // LinkExampleButton
             // 
+            this.LinkExampleButton.AccessibleDescription = "Dialog with link button";
             this.LinkExampleButton.Image = ((System.Drawing.Image)(resources.GetObject("LinkExampleButton.Image")));
             this.LinkExampleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LinkExampleButton.Location = new System.Drawing.Point(27, 209);
@@ -207,6 +217,7 @@ namespace WinFormsExamples
             // 
             // EventsButton
             // 
+            this.EventsButton.AccessibleDescription = "Task dialog with events example";
             this.EventsButton.Image = ((System.Drawing.Image)(resources.GetObject("EventsButton.Image")));
             this.EventsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EventsButton.Location = new System.Drawing.Point(27, 248);
@@ -220,6 +231,7 @@ namespace WinFormsExamples
             // 
             // RadioGroupButton
             // 
+            this.RadioGroupButton.AccessibleDescription = "TaskDialog with radio buttons";
             this.RadioGroupButton.Image = ((System.Drawing.Image)(resources.GetObject("RadioGroupButton.Image")));
             this.RadioGroupButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RadioGroupButton.Location = new System.Drawing.Point(27, 287);
@@ -242,6 +254,7 @@ namespace WinFormsExamples
             // 
             // ConventionalQuestionButton
             // 
+            this.ConventionalQuestionButton.AccessibleDescription = "Convental message box example";
             this.ConventionalQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("ConventionalQuestionButton.Image")));
             this.ConventionalQuestionButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConventionalQuestionButton.Location = new System.Drawing.Point(27, 332);
