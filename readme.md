@@ -1,4 +1,4 @@
-# .NET Core 5 TaskDialog
+# .NET Core TaskDialog
 
 When an application requires a message to be display or to ask a user questions the common method is to use a [MessageBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-6.0).
 
@@ -34,7 +34,7 @@ Best way to use the code is to take the class project WindowsFormsLibrary, place
 
 For ease of use, redirect the build output to a library folder e.g. C:\DotNet\Libraries then when needed in a frontend project, add a reference to the dll. Alternate is to create a local NuGet package, add the local NuGet folder to NuGet package manager under Visual Studio and when needed install the package to a project.
 
-Here the author (Karen) uses C:\OED\Dotnetland\NuGet for local packages
+Here the author (Karen) uses C:\Dotnetland\NuGet for local packages
 
 ![img](assets/Example14.png)
 
