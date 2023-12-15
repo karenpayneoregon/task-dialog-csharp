@@ -22,7 +22,7 @@ public partial class Form1 : Form
         toolTip1.Draw += ToolTip1OnDraw;
 
         IconListBox.DataSource = ResourceImages.Instance.Icons;
-        IconListBox.SelectedIndexChanged  += IconListBoxOnSelectedIndexChanged;
+        IconListBox.SelectedIndexChanged += IconListBoxOnSelectedIndexChanged;
 
         IconListBox.SelectedIndex = IconListBox.FindString("Csharp");
 
@@ -52,10 +52,10 @@ public partial class Form1 : Form
 
     private void AutoCloseButton_Click(object sender, EventArgs e)
     {
-        Dialogs.AutoCloseDialog(this,Properties.Resources.Timer_16x,2);
+        Dialogs.AutoCloseDialog(this, Properties.Resources.Timer_16x, 2);
     }
 
-    private void AutoCloseProgressButton_Click(object sender, EventArgs e) => 
+    private void AutoCloseProgressButton_Click(object sender, EventArgs e) =>
         Dialogs.AutoClosingTaskDialog(Properties.Resources.Timer_16x);
 
     private void ShowAgainCheckBoxOnCheckedChanged(object sender, EventArgs e)
@@ -151,7 +151,7 @@ public partial class Form1 : Form
 
     private void OnContinueOperation(bool sender)
     {
-        Dialogs.Information(this,$"Continue: {sender.ToYesNoString()} ");
+        Dialogs.Information(this, $"Continue: {sender.ToYesNoString()} ");
     }
 
     /// <summary>
@@ -200,5 +200,10 @@ public partial class Form1 : Form
                 // log exception
             }
         }
+    }
+
+    private void ErrorExampleButton_Click(object sender, EventArgs e)
+    {
+        Dialogs.OpenHelp(this);
     }
 }

@@ -29,277 +29,292 @@ namespace WinFormsExamples
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.AutoCloseButton = new System.Windows.Forms.Button();
-            this.OpenTextFileButton = new System.Windows.Forms.Button();
-            this.ResultsListBox = new System.Windows.Forms.ListBox();
-            this.DoNotShowAgainButton = new System.Windows.Forms.Button();
-            this.ShowAgainCheckBox = new System.Windows.Forms.CheckBox();
-            this.AutoCloseProgressButton = new System.Windows.Forms.Button();
-            this.SecondsUpDown = new WinFormsExamples.Classes.SpecialNumericUpDown();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.IconListBox = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.AskQuestionButton = new System.Windows.Forms.Button();
-            this.LinkExampleButton = new System.Windows.Forms.Button();
-            this.EventsButton = new System.Windows.Forms.Button();
-            this.RadioGroupButton = new System.Windows.Forms.Button();
-            this.VersionLabel = new System.Windows.Forms.Label();
-            this.ConventionalQuestionButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.SecondsUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            AutoCloseButton = new Button();
+            OpenTextFileButton = new Button();
+            ResultsListBox = new ListBox();
+            DoNotShowAgainButton = new Button();
+            ShowAgainCheckBox = new CheckBox();
+            AutoCloseProgressButton = new Button();
+            SecondsUpDown = new Classes.SpecialNumericUpDown();
+            toolTip1 = new ToolTip(components);
+            IconListBox = new ListBox();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            AskQuestionButton = new Button();
+            LinkExampleButton = new Button();
+            EventsButton = new Button();
+            RadioGroupButton = new Button();
+            VersionLabel = new Label();
+            ConventionalQuestionButton = new Button();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)SecondsUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // AutoCloseButton
             // 
-            this.AutoCloseButton.AccessibleDescription = "Auto close dialog sample with user define timeout";
-            this.AutoCloseButton.Image = global::WinFormsExamples.Properties.Resources.SplashScreen_16x;
-            this.AutoCloseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AutoCloseButton.Location = new System.Drawing.Point(27, 16);
-            this.AutoCloseButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AutoCloseButton.Name = "AutoCloseButton";
-            this.AutoCloseButton.Size = new System.Drawing.Size(214, 37);
-            this.AutoCloseButton.TabIndex = 0;
-            this.AutoCloseButton.Text = "Auto-close";
-            this.AutoCloseButton.UseVisualStyleBackColor = true;
-            this.AutoCloseButton.Click += new System.EventHandler(this.AutoCloseButton_Click);
+            AutoCloseButton.AccessibleDescription = "Auto close dialog sample with user define timeout";
+            AutoCloseButton.Image = Properties.Resources.SplashScreen_16x;
+            AutoCloseButton.ImageAlign = ContentAlignment.MiddleLeft;
+            AutoCloseButton.Location = new Point(27, 16);
+            AutoCloseButton.Margin = new Padding(3, 4, 3, 4);
+            AutoCloseButton.Name = "AutoCloseButton";
+            AutoCloseButton.Size = new Size(214, 37);
+            AutoCloseButton.TabIndex = 0;
+            AutoCloseButton.Text = "Auto-close";
+            AutoCloseButton.UseVisualStyleBackColor = true;
+            AutoCloseButton.Click += AutoCloseButton_Click;
             // 
             // OpenTextFileButton
             // 
-            this.OpenTextFileButton.AccessibleDescription = "Use PowerShell to get computer information to a json file";
-            this.OpenTextFileButton.Image = ((System.Drawing.Image)(resources.GetObject("OpenTextFileButton.Image")));
-            this.OpenTextFileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OpenTextFileButton.Location = new System.Drawing.Point(27, 132);
-            this.OpenTextFileButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OpenTextFileButton.Name = "OpenTextFileButton";
-            this.OpenTextFileButton.Size = new System.Drawing.Size(214, 37);
-            this.OpenTextFileButton.TabIndex = 1;
-            this.OpenTextFileButton.Text = "Open text file";
-            this.OpenTextFileButton.UseVisualStyleBackColor = true;
-            this.OpenTextFileButton.Click += new System.EventHandler(this.OpenTextFileButton_Click);
+            OpenTextFileButton.AccessibleDescription = "Use PowerShell to get computer information to a json file";
+            OpenTextFileButton.Image = (Image)resources.GetObject("OpenTextFileButton.Image");
+            OpenTextFileButton.ImageAlign = ContentAlignment.MiddleLeft;
+            OpenTextFileButton.Location = new Point(27, 132);
+            OpenTextFileButton.Margin = new Padding(3, 4, 3, 4);
+            OpenTextFileButton.Name = "OpenTextFileButton";
+            OpenTextFileButton.Size = new Size(214, 37);
+            OpenTextFileButton.TabIndex = 1;
+            OpenTextFileButton.Text = "Open text file";
+            OpenTextFileButton.UseVisualStyleBackColor = true;
+            OpenTextFileButton.Click += OpenTextFileButton_Click;
             // 
             // ResultsListBox
             // 
-            this.ResultsListBox.AccessibleDescription = "results from donot show again";
-            this.ResultsListBox.FormattingEnabled = true;
-            this.ResultsListBox.ItemHeight = 20;
-            this.ResultsListBox.Location = new System.Drawing.Point(433, 36);
-            this.ResultsListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ResultsListBox.Name = "ResultsListBox";
-            this.ResultsListBox.Size = new System.Drawing.Size(321, 204);
-            this.ResultsListBox.TabIndex = 2;
+            ResultsListBox.AccessibleDescription = "results from donot show again";
+            ResultsListBox.FormattingEnabled = true;
+            ResultsListBox.ItemHeight = 20;
+            ResultsListBox.Location = new Point(433, 36);
+            ResultsListBox.Margin = new Padding(3, 4, 3, 4);
+            ResultsListBox.Name = "ResultsListBox";
+            ResultsListBox.Size = new Size(321, 204);
+            ResultsListBox.TabIndex = 2;
             // 
             // DoNotShowAgainButton
             // 
-            this.DoNotShowAgainButton.AccessibleDescription = "Display donot show again dialog";
-            this.DoNotShowAgainButton.Image = global::WinFormsExamples.Properties.Resources.ShowDetails_16x;
-            this.DoNotShowAgainButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DoNotShowAgainButton.Location = new System.Drawing.Point(27, 93);
-            this.DoNotShowAgainButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DoNotShowAgainButton.Name = "DoNotShowAgainButton";
-            this.DoNotShowAgainButton.Size = new System.Drawing.Size(214, 37);
-            this.DoNotShowAgainButton.TabIndex = 3;
-            this.DoNotShowAgainButton.Text = "Do not show again";
-            this.DoNotShowAgainButton.UseVisualStyleBackColor = true;
-            this.DoNotShowAgainButton.Click += new System.EventHandler(this.DoNotShowAgainButton_Click);
+            DoNotShowAgainButton.AccessibleDescription = "Display donot show again dialog";
+            DoNotShowAgainButton.Image = Properties.Resources.ShowDetails_16x;
+            DoNotShowAgainButton.ImageAlign = ContentAlignment.MiddleLeft;
+            DoNotShowAgainButton.Location = new Point(27, 93);
+            DoNotShowAgainButton.Margin = new Padding(3, 4, 3, 4);
+            DoNotShowAgainButton.Name = "DoNotShowAgainButton";
+            DoNotShowAgainButton.Size = new Size(214, 37);
+            DoNotShowAgainButton.TabIndex = 3;
+            DoNotShowAgainButton.Text = "Do not show again";
+            DoNotShowAgainButton.UseVisualStyleBackColor = true;
+            DoNotShowAgainButton.Click += DoNotShowAgainButton_Click;
             // 
             // ShowAgainCheckBox
             // 
-            this.ShowAgainCheckBox.AccessibleDescription = "Used to toggle show again";
-            this.ShowAgainCheckBox.AutoSize = true;
-            this.ShowAgainCheckBox.Location = new System.Drawing.Point(248, 99);
-            this.ShowAgainCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ShowAgainCheckBox.Name = "ShowAgainCheckBox";
-            this.ShowAgainCheckBox.Size = new System.Drawing.Size(156, 24);
-            this.ShowAgainCheckBox.TabIndex = 4;
-            this.ShowAgainCheckBox.Text = "Toggle show again";
-            this.toolTip1.SetToolTip(this.ShowAgainCheckBox, "Toggle enabled/disable of do not show again in json settings file");
-            this.ShowAgainCheckBox.UseVisualStyleBackColor = true;
+            ShowAgainCheckBox.AccessibleDescription = "Used to toggle show again";
+            ShowAgainCheckBox.AutoSize = true;
+            ShowAgainCheckBox.Location = new Point(248, 99);
+            ShowAgainCheckBox.Margin = new Padding(3, 4, 3, 4);
+            ShowAgainCheckBox.Name = "ShowAgainCheckBox";
+            ShowAgainCheckBox.Size = new Size(156, 24);
+            ShowAgainCheckBox.TabIndex = 4;
+            ShowAgainCheckBox.Text = "Toggle show again";
+            toolTip1.SetToolTip(ShowAgainCheckBox, "Toggle enabled/disable of do not show again in json settings file");
+            ShowAgainCheckBox.UseVisualStyleBackColor = true;
             // 
             // AutoCloseProgressButton
             // 
-            this.AutoCloseProgressButton.AccessibleDescription = "Auto close dialog demo fix fimeout";
-            this.AutoCloseProgressButton.Image = global::WinFormsExamples.Properties.Resources.SplashScreen_16x;
-            this.AutoCloseProgressButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AutoCloseProgressButton.Location = new System.Drawing.Point(27, 55);
-            this.AutoCloseProgressButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AutoCloseProgressButton.Name = "AutoCloseProgressButton";
-            this.AutoCloseProgressButton.Size = new System.Drawing.Size(214, 37);
-            this.AutoCloseProgressButton.TabIndex = 5;
-            this.AutoCloseProgressButton.Text = "Auto-close";
-            this.AutoCloseProgressButton.UseVisualStyleBackColor = true;
-            this.AutoCloseProgressButton.Click += new System.EventHandler(this.AutoCloseProgressButton_Click);
+            AutoCloseProgressButton.AccessibleDescription = "Auto close dialog demo fix fimeout";
+            AutoCloseProgressButton.Image = Properties.Resources.SplashScreen_16x;
+            AutoCloseProgressButton.ImageAlign = ContentAlignment.MiddleLeft;
+            AutoCloseProgressButton.Location = new Point(27, 55);
+            AutoCloseProgressButton.Margin = new Padding(3, 4, 3, 4);
+            AutoCloseProgressButton.Name = "AutoCloseProgressButton";
+            AutoCloseProgressButton.Size = new Size(214, 37);
+            AutoCloseProgressButton.TabIndex = 5;
+            AutoCloseProgressButton.Text = "Auto-close";
+            AutoCloseProgressButton.UseVisualStyleBackColor = true;
+            AutoCloseProgressButton.Click += AutoCloseProgressButton_Click;
             // 
             // SecondsUpDown
             // 
-            this.SecondsUpDown.AccessibleDescription = "Timeout input in seconds";
-            this.SecondsUpDown.Location = new System.Drawing.Point(248, 19);
-            this.SecondsUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SecondsUpDown.Name = "SecondsUpDown";
-            this.SecondsUpDown.Size = new System.Drawing.Size(48, 27);
-            this.SecondsUpDown.TabIndex = 6;
-            this.SecondsUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip1.SetToolTip(this.SecondsUpDown, "Specify number of second before auto-closing the dialog");
+            SecondsUpDown.AccessibleDescription = "Timeout input in seconds";
+            SecondsUpDown.Location = new Point(248, 19);
+            SecondsUpDown.Margin = new Padding(3, 4, 3, 4);
+            SecondsUpDown.Name = "SecondsUpDown";
+            SecondsUpDown.Size = new Size(48, 27);
+            SecondsUpDown.TabIndex = 6;
+            SecondsUpDown.TextAlign = HorizontalAlignment.Right;
+            toolTip1.SetToolTip(SecondsUpDown, "Specify number of second before auto-closing the dialog");
             // 
             // toolTip1
             // 
-            this.toolTip1.BackColor = System.Drawing.Color.LightGreen;
-            this.toolTip1.OwnerDraw = true;
+            toolTip1.BackColor = Color.LightGreen;
+            toolTip1.OwnerDraw = true;
             // 
             // IconListBox
             // 
-            this.IconListBox.AccessibleDescription = "List of icons for donot show again dialog";
-            this.IconListBox.FormattingEnabled = true;
-            this.IconListBox.ItemHeight = 20;
-            this.IconListBox.Location = new System.Drawing.Point(433, 280);
-            this.IconListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.IconListBox.Name = "IconListBox";
-            this.IconListBox.Size = new System.Drawing.Size(234, 304);
-            this.IconListBox.TabIndex = 8;
+            IconListBox.AccessibleDescription = "List of icons for donot show again dialog";
+            IconListBox.FormattingEnabled = true;
+            IconListBox.ItemHeight = 20;
+            IconListBox.Location = new Point(433, 280);
+            IconListBox.Margin = new Padding(3, 4, 3, 4);
+            IconListBox.Name = "IconListBox";
+            IconListBox.Size = new Size(234, 304);
+            IconListBox.TabIndex = 8;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(674, 280);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 83);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Location = new Point(674, 280);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(78, 83);
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(433, 255);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Icons for do not show again";
+            label1.AutoSize = true;
+            label1.Location = new Point(433, 255);
+            label1.Name = "label1";
+            label1.Size = new Size(193, 20);
+            label1.TabIndex = 10;
+            label1.Text = "Icons for do not show again";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(438, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Do not show again results";
+            label2.AutoSize = true;
+            label2.Location = new Point(438, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(180, 20);
+            label2.TabIndex = 11;
+            label2.Text = "Do not show again results";
             // 
             // AskQuestionButton
             // 
-            this.AskQuestionButton.AccessibleDescription = "Question dialog example";
-            this.AskQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("AskQuestionButton.Image")));
-            this.AskQuestionButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AskQuestionButton.Location = new System.Drawing.Point(27, 171);
-            this.AskQuestionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AskQuestionButton.Name = "AskQuestionButton";
-            this.AskQuestionButton.Size = new System.Drawing.Size(214, 37);
-            this.AskQuestionButton.TabIndex = 12;
-            this.AskQuestionButton.Text = "Question";
-            this.AskQuestionButton.UseVisualStyleBackColor = true;
-            this.AskQuestionButton.Click += new System.EventHandler(this.AskQuestionButton_Click);
+            AskQuestionButton.AccessibleDescription = "Question dialog example";
+            AskQuestionButton.Image = (Image)resources.GetObject("AskQuestionButton.Image");
+            AskQuestionButton.ImageAlign = ContentAlignment.MiddleLeft;
+            AskQuestionButton.Location = new Point(27, 171);
+            AskQuestionButton.Margin = new Padding(3, 4, 3, 4);
+            AskQuestionButton.Name = "AskQuestionButton";
+            AskQuestionButton.Size = new Size(214, 37);
+            AskQuestionButton.TabIndex = 12;
+            AskQuestionButton.Text = "Question";
+            AskQuestionButton.UseVisualStyleBackColor = true;
+            AskQuestionButton.Click += AskQuestionButton_Click;
             // 
             // LinkExampleButton
             // 
-            this.LinkExampleButton.AccessibleDescription = "Dialog with link button";
-            this.LinkExampleButton.Image = ((System.Drawing.Image)(resources.GetObject("LinkExampleButton.Image")));
-            this.LinkExampleButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LinkExampleButton.Location = new System.Drawing.Point(27, 209);
-            this.LinkExampleButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LinkExampleButton.Name = "LinkExampleButton";
-            this.LinkExampleButton.Size = new System.Drawing.Size(214, 37);
-            this.LinkExampleButton.TabIndex = 13;
-            this.LinkExampleButton.Text = "Link button sample";
-            this.LinkExampleButton.UseVisualStyleBackColor = true;
-            this.LinkExampleButton.Click += new System.EventHandler(this.LinkExampleButton_Click);
+            LinkExampleButton.AccessibleDescription = "Dialog with link button";
+            LinkExampleButton.Image = (Image)resources.GetObject("LinkExampleButton.Image");
+            LinkExampleButton.ImageAlign = ContentAlignment.MiddleLeft;
+            LinkExampleButton.Location = new Point(27, 209);
+            LinkExampleButton.Margin = new Padding(3, 4, 3, 4);
+            LinkExampleButton.Name = "LinkExampleButton";
+            LinkExampleButton.Size = new Size(214, 37);
+            LinkExampleButton.TabIndex = 13;
+            LinkExampleButton.Text = "Link button sample";
+            LinkExampleButton.UseVisualStyleBackColor = true;
+            LinkExampleButton.Click += LinkExampleButton_Click;
             // 
             // EventsButton
             // 
-            this.EventsButton.AccessibleDescription = "Task dialog with events example";
-            this.EventsButton.Image = ((System.Drawing.Image)(resources.GetObject("EventsButton.Image")));
-            this.EventsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EventsButton.Location = new System.Drawing.Point(27, 248);
-            this.EventsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EventsButton.Name = "EventsButton";
-            this.EventsButton.Size = new System.Drawing.Size(214, 37);
-            this.EventsButton.TabIndex = 14;
-            this.EventsButton.Text = "Events sample";
-            this.EventsButton.UseVisualStyleBackColor = true;
-            this.EventsButton.Click += new System.EventHandler(this.EventsButton_Click);
+            EventsButton.AccessibleDescription = "Task dialog with events example";
+            EventsButton.Image = (Image)resources.GetObject("EventsButton.Image");
+            EventsButton.ImageAlign = ContentAlignment.MiddleLeft;
+            EventsButton.Location = new Point(27, 248);
+            EventsButton.Margin = new Padding(3, 4, 3, 4);
+            EventsButton.Name = "EventsButton";
+            EventsButton.Size = new Size(214, 37);
+            EventsButton.TabIndex = 14;
+            EventsButton.Text = "Events sample";
+            EventsButton.UseVisualStyleBackColor = true;
+            EventsButton.Click += EventsButton_Click;
             // 
             // RadioGroupButton
             // 
-            this.RadioGroupButton.AccessibleDescription = "TaskDialog with radio buttons";
-            this.RadioGroupButton.Image = ((System.Drawing.Image)(resources.GetObject("RadioGroupButton.Image")));
-            this.RadioGroupButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RadioGroupButton.Location = new System.Drawing.Point(27, 287);
-            this.RadioGroupButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RadioGroupButton.Name = "RadioGroupButton";
-            this.RadioGroupButton.Size = new System.Drawing.Size(214, 37);
-            this.RadioGroupButton.TabIndex = 15;
-            this.RadioGroupButton.Text = "Radio buttons";
-            this.RadioGroupButton.UseVisualStyleBackColor = true;
-            this.RadioGroupButton.Click += new System.EventHandler(this.RadioGroupButton_Click);
+            RadioGroupButton.AccessibleDescription = "TaskDialog with radio buttons";
+            RadioGroupButton.Image = (Image)resources.GetObject("RadioGroupButton.Image");
+            RadioGroupButton.ImageAlign = ContentAlignment.MiddleLeft;
+            RadioGroupButton.Location = new Point(27, 287);
+            RadioGroupButton.Margin = new Padding(3, 4, 3, 4);
+            RadioGroupButton.Name = "RadioGroupButton";
+            RadioGroupButton.Size = new Size(214, 37);
+            RadioGroupButton.TabIndex = 15;
+            RadioGroupButton.Text = "Radio buttons";
+            RadioGroupButton.UseVisualStyleBackColor = true;
+            RadioGroupButton.Click += RadioGroupButton_Click;
             // 
             // VersionLabel
             // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Location = new System.Drawing.Point(248, 296);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(45, 20);
-            this.VersionLabel.TabIndex = 16;
-            this.VersionLabel.Text = "None";
+            VersionLabel.AutoSize = true;
+            VersionLabel.Location = new Point(248, 296);
+            VersionLabel.Name = "VersionLabel";
+            VersionLabel.Size = new Size(45, 20);
+            VersionLabel.TabIndex = 16;
+            VersionLabel.Text = "None";
             // 
             // ConventionalQuestionButton
             // 
-            this.ConventionalQuestionButton.AccessibleDescription = "Convental message box example";
-            this.ConventionalQuestionButton.Image = ((System.Drawing.Image)(resources.GetObject("ConventionalQuestionButton.Image")));
-            this.ConventionalQuestionButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ConventionalQuestionButton.Location = new System.Drawing.Point(27, 332);
-            this.ConventionalQuestionButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ConventionalQuestionButton.Name = "ConventionalQuestionButton";
-            this.ConventionalQuestionButton.Size = new System.Drawing.Size(214, 37);
-            this.ConventionalQuestionButton.TabIndex = 17;
-            this.ConventionalQuestionButton.Text = "Question conventional";
-            this.ConventionalQuestionButton.UseVisualStyleBackColor = true;
-            this.ConventionalQuestionButton.Click += new System.EventHandler(this.ConventionalQuestionButton_Click);
+            ConventionalQuestionButton.AccessibleDescription = "Convental message box example";
+            ConventionalQuestionButton.Image = (Image)resources.GetObject("ConventionalQuestionButton.Image");
+            ConventionalQuestionButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ConventionalQuestionButton.Location = new Point(27, 332);
+            ConventionalQuestionButton.Margin = new Padding(3, 4, 3, 4);
+            ConventionalQuestionButton.Name = "ConventionalQuestionButton";
+            ConventionalQuestionButton.Size = new Size(214, 37);
+            ConventionalQuestionButton.TabIndex = 17;
+            ConventionalQuestionButton.Text = "Question conventional";
+            ConventionalQuestionButton.UseVisualStyleBackColor = true;
+            ConventionalQuestionButton.Click += ConventionalQuestionButton_Click;
+            // 
+            // button1
+            // 
+            button1.AccessibleDescription = "Convental message box example";
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(27, 377);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(214, 37);
+            button1.TabIndex = 18;
+            button1.Text = "Fatal Error example";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += ErrorExampleButton_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 600);
-            this.Controls.Add(this.ConventionalQuestionButton);
-            this.Controls.Add(this.VersionLabel);
-            this.Controls.Add(this.RadioGroupButton);
-            this.Controls.Add(this.EventsButton);
-            this.Controls.Add(this.LinkExampleButton);
-            this.Controls.Add(this.AskQuestionButton);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.IconListBox);
-            this.Controls.Add(this.SecondsUpDown);
-            this.Controls.Add(this.AutoCloseProgressButton);
-            this.Controls.Add(this.ShowAgainCheckBox);
-            this.Controls.Add(this.DoNotShowAgainButton);
-            this.Controls.Add(this.ResultsListBox);
-            this.Controls.Add(this.OpenTextFileButton);
-            this.Controls.Add(this.AutoCloseButton);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TaskDialog examples";
-            ((System.ComponentModel.ISupportInitialize)(this.SecondsUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(766, 600);
+            Controls.Add(button1);
+            Controls.Add(ConventionalQuestionButton);
+            Controls.Add(VersionLabel);
+            Controls.Add(RadioGroupButton);
+            Controls.Add(EventsButton);
+            Controls.Add(LinkExampleButton);
+            Controls.Add(AskQuestionButton);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
+            Controls.Add(IconListBox);
+            Controls.Add(SecondsUpDown);
+            Controls.Add(AutoCloseProgressButton);
+            Controls.Add(ShowAgainCheckBox);
+            Controls.Add(DoNotShowAgainButton);
+            Controls.Add(ResultsListBox);
+            Controls.Add(OpenTextFileButton);
+            Controls.Add(AutoCloseButton);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "TaskDialog examples";
+            ((System.ComponentModel.ISupportInitialize)SecondsUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -322,6 +337,7 @@ namespace WinFormsExamples
         private System.Windows.Forms.Button RadioGroupButton;
         private System.Windows.Forms.Label VersionLabel;
         private System.Windows.Forms.Button ConventionalQuestionButton;
+        private Button button1;
     }
 }
 

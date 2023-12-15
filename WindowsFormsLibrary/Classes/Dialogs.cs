@@ -954,6 +954,24 @@ namespace WindowsFormsLibrary.Classes
             return TaskDialog.ShowDialog(owner, page);
         }
 
+        public static TaskDialogButton OpenHelp(Control owner)
+        {
+            var openButton = new TaskDialogButton("Support site");
+            var cancelButton = new TaskDialogButton("Ok");
+            var copyButton = new TaskDialogButton("Copy");
+
+            openButton.Click += OnOpenButtonOnClick;
+
+            TaskDialogPage page = new()
+            {
+                Caption = "Microsoft Visual Studio",
+                Heading = "A fatal error occured and debugging needs to be terminated, For more details, please see Microsoft help and support site. HRESULT=0x80070006. Error code=0x0. ",
+                Buttons = { cancelButton, openButton, copyButton },
+                Icon = new TaskDialogIcon(Properties.Resources.error1),
+            };
+
+            return TaskDialog.ShowDialog(owner, page);
+        }
         public delegate void GetComputerInformation(MachineComputerInformation information);
         public static event GetComputerInformation ComputerInformationEvent;
         private static async void OnOpenButtonOnClick(object o, EventArgs eventArgs)
@@ -1140,7 +1158,7 @@ namespace WindowsFormsLibrary.Classes
             timer.Tick += (_, _) =>
             {
                 remaining -= 1;
-
+                
                 if (remaining != 0) return;
                 timer.Enabled = false;
                 if (continueButton.BoundPage is not null)
