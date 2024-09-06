@@ -50,6 +50,7 @@ namespace WinFormsExamples
             VersionLabel = new Label();
             ConventionalQuestionButton = new Button();
             button1 = new Button();
+            ActionsButton = new Button();
             ((System.ComponentModel.ISupportInitialize)SecondsUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -281,11 +282,26 @@ namespace WinFormsExamples
             button1.UseVisualStyleBackColor = true;
             button1.Click += ErrorExampleButton_Click;
             // 
+            // ActionsButton
+            // 
+            ActionsButton.AccessibleDescription = "Convental message box example";
+            ActionsButton.Image = (Image)resources.GetObject("ActionsButton.Image");
+            ActionsButton.ImageAlign = ContentAlignment.MiddleLeft;
+            ActionsButton.Location = new Point(27, 422);
+            ActionsButton.Margin = new Padding(3, 4, 3, 4);
+            ActionsButton.Name = "ActionsButton";
+            ActionsButton.Size = new Size(214, 37);
+            ActionsButton.TabIndex = 19;
+            ActionsButton.Text = "Actions";
+            ActionsButton.UseVisualStyleBackColor = true;
+            ActionsButton.Click += ActionsButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(766, 600);
+            Controls.Add(ActionsButton);
             Controls.Add(button1);
             Controls.Add(ConventionalQuestionButton);
             Controls.Add(VersionLabel);
@@ -338,6 +354,7 @@ namespace WinFormsExamples
         private System.Windows.Forms.Label VersionLabel;
         private System.Windows.Forms.Button ConventionalQuestionButton;
         private Button button1;
+        private Button ActionsButton;
     }
 }
 

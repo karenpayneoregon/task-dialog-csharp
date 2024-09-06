@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 using WindowsFormsLibrary.LanguageExtensions;
 using static System.DateTime;
 using Timer = System.Windows.Forms.Timer;
@@ -265,7 +256,7 @@ namespace WindowsFormsLibrary.Classes
         ///
         /// Last two parameters are the actions to perform
         /// </remarks>
-        public static void Question(Control owner, string heading, Action yesAction, Action noAction)
+        public static void QuestionWithActions(Control owner, string heading, Action yesAction, Action noAction)
         {
 
             TaskDialogButton yesButton = new("Yes") { Tag = DialogResult.Yes };
@@ -965,7 +956,7 @@ namespace WindowsFormsLibrary.Classes
             TaskDialogPage page = new()
             {
                 Caption = "Microsoft Visual Studio",
-                Heading = "A fatal error occured and debugging needs to be terminated, For more details, please see Microsoft help and support site. HRESULT=0x80070006. Error code=0x0. ",
+                Heading = "A fatal error occured and debugging needs to be terminated,\n\nFor more details, please see Microsoft help and support site.\n\nHRESULT=0x80070006. Error code=0x0. ",
                 Buttons = { cancelButton, openButton, copyButton },
                 Icon = new TaskDialogIcon(Properties.Resources.error1),
             };
@@ -1122,12 +1113,16 @@ namespace WindowsFormsLibrary.Classes
 
             var radioButton1 = page1.RadioButtons.Add("Radi&oButton 1");
             var radioButton2 = page1.RadioButtons.Add("RadioB&utton 2");
+            var radioButton3 = page1.RadioButtons.Add("RadioB&utton 3");
 
             radioButton1.CheckedChanged += (_, _) => 
                 Debug.WriteLine($"{nameof(radioButton1)} CheckedChanged: {radioButton1.Checked.ToYesNoString()}");
 
             radioButton2.CheckedChanged += (_, _) =>
                 Debug.WriteLine($"{nameof(radioButton2)} CheckedChanged: {radioButton2.Checked.ToYesNoString()}");
+
+            radioButton3.CheckedChanged += (_, _) =>
+                Debug.WriteLine($"{nameof(radioButton3)} CheckedChanged: {radioButton3.Checked.ToYesNoString()}");
 
             var dialogResult = TaskDialog.ShowDialog(page1);
             Debug.WriteLine($"---> Dialog Result: {dialogResult}");

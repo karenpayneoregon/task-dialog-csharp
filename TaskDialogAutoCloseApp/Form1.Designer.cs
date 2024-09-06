@@ -28,42 +28,42 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.AutoCloseButton1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // AutoCloseButton1
-            // 
-            this.AutoCloseButton1.Location = new System.Drawing.Point(142, 81);
-            this.AutoCloseButton1.Name = "AutoCloseButton1";
-            this.AutoCloseButton1.Size = new System.Drawing.Size(118, 29);
-            this.AutoCloseButton1.TabIndex = 0;
-            this.AutoCloseButton1.Text = "Auto close 1";
-            this.AutoCloseButton1.UseVisualStyleBackColor = true;
-            this.AutoCloseButton1.Click += new System.EventHandler(this.AutoCloseButton1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(142, 116);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Auto close 2";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.AutoCloseButton2_Click);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 273);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.AutoCloseButton1);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-
+        AutoCloseButton1 = new Button();
+        button1 = new Button();
+        SuspendLayout();
+        // 
+        // AutoCloseButton1
+        // 
+        AutoCloseButton1.Location = new Point(142, 81);
+        AutoCloseButton1.Name = "AutoCloseButton1";
+        AutoCloseButton1.Size = new Size(118, 29);
+        AutoCloseButton1.TabIndex = 0;
+        AutoCloseButton1.Text = "Auto close 1";
+        AutoCloseButton1.UseVisualStyleBackColor = true;
+        AutoCloseButton1.Click += AutoCloseButton1_Click;
+        // 
+        // button1
+        // 
+        button1.Location = new Point(142, 116);
+        button1.Name = "button1";
+        button1.Size = new Size(118, 29);
+        button1.TabIndex = 1;
+        button1.Text = "Auto close 2";
+        button1.UseVisualStyleBackColor = true;
+        button1.Click += AutoCloseButton2_Click;
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(436, 273);
+        Controls.Add(button1);
+        Controls.Add(AutoCloseButton1);
+        FormBorderStyle = FormBorderStyle.FixedToolWindow;
+        Name = "Form1";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Code sample";
+        ResumeLayout(false);
     }
 
     #endregion

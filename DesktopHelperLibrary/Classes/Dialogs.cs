@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace DesktopHelperLibrary.Classes
 {
-    public class Class1
+    public class Dialogs
     {
         /// <summary>
         /// Dialog to ask a question
@@ -62,7 +62,7 @@ namespace DesktopHelperLibrary.Classes
         /// <remarks>
         ///  With a user defined icon from project resources
         /// </remarks>
-        public static bool Question(Form owner, string caption, string heading, string yesText, string noText, DialogResult defaultButton)
+        public static bool Question(Control owner, string caption, string heading, string yesText, string noText, DialogResult defaultButton)
         {
 
             TaskDialogButton yesButton = new(yesText) { Tag = DialogResult.Yes };
@@ -92,8 +92,42 @@ namespace DesktopHelperLibrary.Classes
             };
 
             var result = TaskDialog.ShowDialog(owner, page);
-
+            
             return (DialogResult)result.Tag! == DialogResult.Yes;
+
+        }
+        public static void QuestionWithActions(Control owner, string heading, Action yesAction, Action noAction)
+        {
+
+            TaskDialogButton yesButton = new("Go for it") { Tag = DialogResult.Yes };
+            TaskDialogButton noButton = new("No way") { Tag = DialogResult.No };
+
+            var buttons = new TaskDialogButtonCollection
+            {
+                yesButton,
+                noButton
+            };
+
+
+            TaskDialogPage page = new()
+            {
+                Caption = "Question",
+                SizeToContent = true,
+                Heading = heading,
+                Icon = new TaskDialogIcon(Properties.Resources.QuestionBlue),
+                Buttons = buttons
+            };
+
+            var result = TaskDialog.ShowDialog(owner, page);
+
+            if ((DialogResult)result.Tag! == DialogResult.Yes)
+            {
+                yesAction?.Invoke();
+            }
+            else
+            {
+                noAction?.Invoke();
+            }
 
         }
 

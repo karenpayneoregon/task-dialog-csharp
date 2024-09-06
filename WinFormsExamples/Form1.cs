@@ -15,7 +15,7 @@ public partial class Form1 : Form
         InitializeComponent();
 
         Dialogs.ContinueOperation += OnContinueOperation;
-        Dialogs.ComputerInformationEvent += OnComputerInformation;
+        //Dialogs.ComputerInformationEvent += OnComputerInformation;
         Dialogs.VisualStudioChecked += DialogsOnVisualStudioChecked;
 
         ShowAgainCheckBox.CheckedChanged += ShowAgainCheckBoxOnCheckedChanged;
@@ -109,14 +109,7 @@ public partial class Form1 : Form
         ResultsListBox.Items.Add(result.ToString());
     }
 
-    public void YesMethod()
-    {
-        Debug.WriteLine(nameof(YesMethod));
-    }
-    public void NoMethod()
-    {
-        Debug.WriteLine(nameof(NoMethod));
-    }
+
 
     private void ShowCurrentIcon()
     {
@@ -205,5 +198,19 @@ public partial class Form1 : Form
     private void ErrorExampleButton_Click(object sender, EventArgs e)
     {
         Dialogs.OpenHelp(this);
+    }
+
+    private void ActionsButton_Click(object sender, EventArgs e)
+    {
+        Dialogs.QuestionWithActions(this, "Heading", YesMethod, NoMethod);
+    }
+
+    public void YesMethod()
+    {
+        Debug.WriteLine(nameof(YesMethod));
+    }
+    public void NoMethod()
+    {
+        Debug.WriteLine(nameof(NoMethod));
     }
 }
